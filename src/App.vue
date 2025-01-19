@@ -2,6 +2,7 @@
 import { onMounted } from 'vue';
 import { RouterView } from 'vue-router';
 import NavBar from './components/NavBar.vue'; // Importujeme NavBar komponent
+import Footer from './components/Footer.vue'; // Importujeme Footer komponent
 
 // Pridanie triedy nav-open pri otváraní hamburger menu
 onMounted(() => {
@@ -20,15 +21,9 @@ onMounted(() => {
     <div class="main-content">
       <router-view></router-view> <!-- Dynamický obsah stránky -->
     </div>
+    <Footer /> <!-- Footer na spodok stránky -->
   </div>
 </template>
-
-
-<script>
-export default {
-  name: 'App',
-};
-</script>
 
 <style>
 .main-content {
