@@ -69,7 +69,9 @@ export default {
 
 /* Vlastné Bootstrap štýly pre animácie a vzhľad */
 .custom-navbar {
-  background-color: #212529;
+  background: linear-gradient(90deg, #0b0e10, #0d1117, #121417, #1a1a1a);
+  
+
   padding: 15px 20px;
   position: sticky;
   top: 0;

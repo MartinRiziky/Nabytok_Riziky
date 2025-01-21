@@ -27,7 +27,16 @@ onMounted(() => {
 
 <style>
 .main-content {
-  padding-top: 3px; /* Prispôsobí sa výške navigácie */
+  min-height: calc(100vh - 70px - 50px); /* 100vh mínus výška navigácie a footeru */
+}
+
+.footer {
+  margin-top: auto;
+  background-color: #212529;
+  color: white;
+  text-align: center;
+  padding: 1px 0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Štýly pre rámik pri otvorenom menu */

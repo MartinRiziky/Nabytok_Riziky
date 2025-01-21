@@ -47,3 +47,6 @@
     width: 90%;
   }
 }
+[class*="devtools"], [id*="devtools"] {
+  display: none !important;
+}

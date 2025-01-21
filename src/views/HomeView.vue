@@ -81,4 +81,17 @@ export default {
   background-color: #e0a800;
   color: white;
 }
+.main-content {
+  min-height: calc(100vh - 70px - 50px); /* 100vh mínus výška navigácie a footeru */
+}
+
+.footer {
+  margin-top: auto;
+  background-color: #212529;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
 </style>
