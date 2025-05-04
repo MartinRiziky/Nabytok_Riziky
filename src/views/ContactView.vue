@@ -5,21 +5,29 @@
       Ak máte otázky alebo potrebujete ďalšie informácie, neváhajte nás kontaktovať pomocou formulára nižšie alebo na našich kontaktných údajoch.
     </p>
 
-    <!-- Kontaktný formulár -->
-    <form @submit.prevent="submitForm">
+    <!-- ✅ Nový formulár bez JavaScriptu -->
+    <form
+      action="https://formsubmit.co/info@nabytokriziky.sk"
+      method="POST"
+    >
+      <input type="hidden" name="_next" value="https://nabytokriziky.netlify.app/kontakt" />
+      <input type="hidden" name="_captcha" value="false" />
+
       <div class="form-group">
         <label for="name">Meno:</label>
-        <input type="text" id="name" v-model="formData.name" required />
+        <input type="text" id="name" name="name" required />
       </div>
+
       <div class="form-group">
         <label for="email">E-mail:</label>
-        <input type="email" id="email" v-model="formData.email" required />
-        <span v-if="!isValidEmail" class="error-message">Zadajte platný e-mail.</span>
+        <input type="email" id="email" name="email" required />
       </div>
+
       <div class="form-group">
         <label for="message">Správa:</label>
-        <textarea id="message" v-model="formData.message" rows="5" required></textarea>
+        <textarea id="message" name="message" rows="5" required></textarea>
       </div>
+
       <button type="submit">Odoslať</button>
     </form>
 
@@ -32,6 +40,7 @@
     </div>
   </div>
 </template>
+
 
 <script>
 export default {
